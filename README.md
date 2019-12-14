@@ -17,11 +17,11 @@ The Minimum Viable Product must be completed in three hours.
 Follow these steps to set up and work on your project:
 
 - [x] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [x] Add your _Team Lead_ as collaborator on Github.
+- [x] Clone your forked version of the Repository.
+- [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
@@ -38,15 +38,25 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
+        A. I learned about the middleware that express has and also the built in features that express has making righing node easier.
 
 - [ ] Describe Middleware?
+        a. there are 4 type off middlware 
+            -built in
+            -error
+            -custom
+            -3rd party
+        these middlware are function that have access to the req and the res and is commonly followed by a variable name next()
 
 - [ ] Describe a Resource?
+        A. this question needs to be more specific there can be multiple thing that can consider to be the resources such as the the amount of processer node uses which is one. The documentation or the npm packages.
 
 - [ ] What can the API return to help clients know if a request was successful?
+        A. We can sent the a status code along with a message to the the user weather the req was successful or not.
 
 - [ ] How can we partition our application into sub-applications?
+        A. we can spilt our routing with RESTful API
 
 ## Minimum Viable Product
 
