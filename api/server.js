@@ -1,6 +1,12 @@
 const express = require('express');
 const server = express();
+const routes = require('./routes/')
+const middlware = require('./middlware/')
 
+
+server.use(express.json())
+middlware(server)
+routes(server)
 
 server.get('/', (req, res) => {
     res.send('<h2>Sprint API up and running</h2>')
