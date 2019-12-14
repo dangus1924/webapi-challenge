@@ -11,7 +11,7 @@ const server = express();
 server.use(express.json(), helmet(), morgan("tiny"));
 
 server.get("/", (req, res) => {
-  res.json({ Check: "working", envMessage: process.env.MESSAGE || "env not working/undefined" });
+  res.json({ API: "Sprint API is working" });
 });
 
 
