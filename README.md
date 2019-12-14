@@ -41,7 +41,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [x] Mention two parts of Express that you learned about this week.
         A. I learned about the middleware that express has and also the built in features that express has making righing node easier.
 
-- [ ] Describe Middleware?
+- [x] Describe Middleware?
         a. there are 4 type off middlware 
             -built in
             -error
@@ -49,19 +49,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
             -3rd party
         these middlware are function that have access to the req and the res and is commonly followed by a variable name next()
 
-- [ ] Describe a Resource?
+- [x] Describe a Resource?
         A. this question needs to be more specific there can be multiple thing that can consider to be the resources such as the the amount of processer node uses which is one. The documentation or the npm packages.
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [x] What can the API return to help clients know if a request was successful?
         A. We can sent the a status code along with a message to the the user weather the req was successful or not.
 
-- [ ] How can we partition our application into sub-applications?
+- [x] How can we partition our application into sub-applications?
         A. we can spilt our routing with RESTful API
 
 ## Minimum Viable Product
 
-- [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+- [x] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+- [x] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
