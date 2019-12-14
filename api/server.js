@@ -1,25 +1,31 @@
-const express = require('express');
-const middleware = require('./middleware/')
+const express = require("express");
+const morgan = require("morgan");
+const helmet = require("helmet");
+
+const projectRouter = require("../api/routes/projectsRouter");
+const actionRouter = require("../api/routes/actionsRouter");
+
 const server = express();
-const routes = require('./routes/')
 
-server.use(express.json())
-middleware(server)
-routes(server)
 
-server.get('/', (req, res) => {
-  res.send(`<h2>This is the API sprint!</h2>`)
+server.use(express.json(), helmet(), morgan("tiny"));
+
+server.get("/", (req, res) => {
+  res.json({ Check: "working", envMessage: process.env.MESSAGE || "env not working/undefined" });
 });
 
-server.use((req, res) => {
-  return res.status(404).json({ message: "The page you are looking for does not currently exist. Try again!"})
-})
+
+server.use("/api/projects", projectRouter);
+server.use("/api/actions", actionRouter);
+
+
+server.use((req, res) => res.status(404).json({ error: "route not found" }));
 
 server.use((err, req, res, next) => {
-  console.log(err)
-  res.status(500).json({
-    message: "An error occurred, please try again later."
-  })
-})
+  const { statusCode, errorMessage, originalError } = err;
+  res
+    .status(statusCode || 500)
+    .json({ errorMessage: errorMessage || "some error occurred, please try again later", originalError });
+});
 
 module.exports = server;
